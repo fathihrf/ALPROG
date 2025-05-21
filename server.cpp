@@ -154,3 +154,9 @@ output warning terserah mau gmn (cout di server paling simple sih)
 semua data dan aksi observable di terminal client & server (client di client, server di server)
 siapkan scenario di mana ada multiple client
 */
+/*
+Fungsi kalkulasi level kritikal: (misal volume float, level %)
+ - jika volume * level < volume minimum maka refil tangki
+ - jika level > 100% maka drain tangki
+ - refil dan drain tangki pakai enum aja (no action, refill, drain)
+*/
