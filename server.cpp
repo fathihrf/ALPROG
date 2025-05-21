@@ -101,6 +101,29 @@ class Tangki {
     }
 }*/
 
+enum TangkiAction {
+    NO_ACTION,
+    REFILL,
+    DRAIN
+};
+
+TangkiAction kalkulasiLevelKritikal(float volume, float level, float volumeMin) {
+    if (volume * (level / 100.0) < volumeMin) {
+        return REFILL;
+    } else if (level > 100.0) {
+        return DRAIN;
+    }
+    return NO_ACTION;
+}
+
+string tangkiActionToString(TangkiAction action) {
+    switch (action) {
+        case REFILL: return "REFILL";
+        case DRAIN: return "DRAIN";
+        default: return "NO_ACTION";
+    }
+}
+
 int main() {
     WSADATA wsa;
     SOCKET listen_socket, client_socket;
