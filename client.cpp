@@ -82,8 +82,8 @@ void simulateLevelChanges(Tangki& tank) {
     if (tank.Level < 0) tank.Level = 0;
     if (tank.Level > 120) tank.Level = 120; // Allowing overflow simulation
     
-    cout << "Current " << tank.Name << " status: Level=" << tank.Level 
-         << "%, Volume=" << tank.Volume << "L, Effective volume=" 
+    cout << "Current " << tank.Name << " status: Level = " << tank.Level 
+         << "%, Volume = " << tank.Volume << "L, Effective volume = " 
          << (tank.Volume * tank.Level / 100.0f) << "L\n";
 }
 
