@@ -184,7 +184,8 @@ void processClientData(const string& data) {
     ss.ignore(); // Skip comma
     ss >> minVolume;
 
-    cout << timestamp << ", Tank name: " << tankName << ", Max volume: " << volume << "L, Current level: " << level << "%, Minimum safe volume: " << minVolume << "L\n";
+    cout << timestamp << ", Tank name: " << tankName << ", Max volume: " << volume 
+         << "L, Current level: " << level << "%, Minimum safe volume: " << minVolume << "L\n";
     
     lock_guard<mutex> lock(tanksMutex);
     
